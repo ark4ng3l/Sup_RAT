@@ -7,7 +7,7 @@ import requests
 
 banner = pyfiglet.figlet_format('sup _ RAT')
 print (colorama.Fore.CYAN + banner)
-#print (colorama.Fore.RED + 'Hi, I Can Do: ')
+
 
 menu_item_choise_1=['1','2']
 
