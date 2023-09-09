@@ -1,0 +1,13 @@
+pyfiglet
+os 
+requests
+colorama
+subprocess
+platform
+cryptography
+sys
+socket
+winreg
+tkinter
+scapy
+whois
