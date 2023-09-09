@@ -2,6 +2,7 @@ import pyfiglet
 import colorama
 import subprocess
 import os
+import requests
 
 
 banner = pyfiglet.figlet_format('sup _ RAT')
