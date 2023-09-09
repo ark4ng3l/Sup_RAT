@@ -21,9 +21,9 @@ user_input = input(colorama.Fore.GREEN + "select a number: " + colorama.Fore.RES
 if user_input == '1':
     pass
 elif user_input =='2':
-    menu_item_choise=['1','2','3','4','5','6']
-
-    menu_items='''
+    
+    menu_item_choise_2=['1','2','3','4','5','6']
+    menu_items_2='''
     [1] View system information
     [2] Get path to creat X folders
     [3] Get command and show output
@@ -34,31 +34,32 @@ elif user_input =='2':
     os.system('cls')
     print (colorama.Fore.CYAN + banner)
     print (colorama.Fore.RED + 'PAssive OPTIONs: ')
-    print (colorama.Fore.YELLOW + menu_items)
+    print (colorama.Fore.YELLOW + menu_items_2)
 
-    user_input = input(colorama.Fore.GREEN + "select a number: " + colorama.Fore.RESET)
-
-    while user_input not in menu_item_choise:
+    user_input_2 = input(colorama.Fore.GREEN + "select a number: " + colorama.Fore.RESET)
+    
+    while user_input_2 not in menu_items_2:
+        os.system('cls')
         print (colorama.Fore.CYAN + banner)
         print (colorama.Fore.RED + 'Hi, I Can Do: ')
-        print (colorama.Fore.YELLOW + menu_items)
-        user_input = input(colorama.Fore.GREEN + "select a number: " + colorama.Fore.RESET)
-    if user_input == '1':
-        print (os.uname_result)
-    elif user_input == '2':
-        user_directory_number=int(input("Enter your directory to creat X folder: "))
-        user_directory=input("Enter your directory to creat X folder: ")
+        print (colorama.Fore.YELLOW + menu_items_2)
+        user_input_2 = input(colorama.Fore.GREEN + "select a number: " + colorama.Fore.RESET)
+        
+    if user_input_2 == '1':
+        print (subprocess.getoutput('systeminfo'))
+    elif user_input_2 == '2':
+        user_directory=input("Enter your directory to creat 100 folder: ")
         os.chdir(user_directory)
-        for i in range(user_directory_number):
+        for i in range(100):
             os.mkdir(f"new folder {i}")
-    elif user_input == '3':
+    elif user_input_2 == '3':
         command = input("Enter your command: ")
         output_command = subprocess.check_output(command,shell=True).decode().split()
         print(output_command)
-    elif user_input == '4':
+    elif user_input_2 == '4':
         program_name = input('Enter name of pragram to kill it: ')
         os.system(f" taskkill /f /im {program_name}*")
-    elif user_input == '5':
+    elif user_input_2 == '5':
         site_name = input("enter site name: ")
         if 'www' not in site_name:
             site_name = 'www.' + site_name
@@ -71,6 +72,6 @@ elif user_input =='2':
             if r.status_code == 200:
                 found.append(j)
         print(found)
-    elif user_input == '6':
+    elif user_input_2 == '6':
         print( 'Nice To Meet You :)')
         exit()
