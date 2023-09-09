@@ -48,8 +48,7 @@ elif user_input =='2':
     if user_input_2 == '1':
         print (subprocess.getoutput('systeminfo'))
     elif user_input_2 == '2':
-        user_x =int(input('please say x number: '))
-        user_directory=input(f"Enter your path to creat {user_x} folder: ")
+        user_directory=input("Enter your directory to creat 100 folder: ")
         os.chdir(user_directory)
         for i in range(user_x):
             os.mkdir(f"new folder {i}")
