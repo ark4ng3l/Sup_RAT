@@ -11,3 +11,4 @@ winreg
 tkinter
 scapy
 whois
+python-whois
