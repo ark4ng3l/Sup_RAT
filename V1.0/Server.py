@@ -3,6 +3,7 @@ import colorama
 import subprocess
 import os
 import requests
+import whois
 
 
 banner = pyfiglet.figlet_format('sup _ RAT')
@@ -29,7 +30,8 @@ elif user_input =='2':
     [3] Get command and show output
     [4] Get program name and kill
     [5] Get site name and list virtual directory
-    [6] exit
+    [6] Get WHoIS :)
+    [7] exit
     '''
     os.system('cls')
     print (colorama.Fore.CYAN + banner)
@@ -75,5 +77,8 @@ elif user_input =='2':
                 found.append(j)
         print(found)
     elif user_input_2 == '6':
-        print( 'Nice To Meet You :)')
+        w = whois.whois(input('please say URL: '))
+        print(w)
+    elif user_input_2 == '7':
+        print('GoodBye :)')
         exit()
