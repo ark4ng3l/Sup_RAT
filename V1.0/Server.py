@@ -20,7 +20,29 @@ print (colorama.Fore.YELLOW + menu_items1)
 
 user_input = input(colorama.Fore.GREEN + "select a number: " + colorama.Fore.RESET)
 if user_input == '1':
-    pass
+        menu_item_choise_3=['1','2','3','4','5','6']
+        menu_items_3='''
+        [1] View system information
+        [2] Get path to creat X folders
+        [3] Get command and show output
+        [4] Get program name and kill
+        [5] Get site name and list virtual directory
+        [6] Get WHoIS :)
+        [7] exit
+        '''
+        os.system('cls')
+        print (colorama.Fore.CYAN + banner)
+        print (colorama.Fore.RED + 'PAssive OPTIONs: ')
+        print (colorama.Fore.YELLOW + menu_items_3)
+
+        user_input_2 = input(colorama.Fore.GREEN + "select a number: " + colorama.Fore.RESET)
+        
+        while user_input_2 not in menu_items_3:
+            os.system('cls')
+            print (colorama.Fore.CYAN + banner)
+            print (colorama.Fore.RED + 'Hi, I Can Do: ')
+            print (colorama.Fore.YELLOW + menu_items_3)
+            user_input_2 = input(colorama.Fore.GREEN + "select a number: " + colorama.Fore.RESET)
 elif user_input =='2':
     
     menu_item_choise_2=['1','2','3','4','5','6']
