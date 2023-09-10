@@ -53,4 +53,3 @@ def decrypt():
         contents_decrypted = Fernet(secretkey).decrypt(contents)
         with open(file, "wb") as thefile:
             thefile.write(contents_decrypted)
-
